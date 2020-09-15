@@ -1,13 +1,17 @@
 public class Livro {
 
-    private String nome;
-    private String descricao;
-    private double valor;
-    private String isbn;
-    private Autor autor;
+    protected String nome;
+    protected String descricao;
+    protected double valor;
+    protected String isbn;
+    protected Autor autor;
 
     public Livro(Autor autor) {
+        this(); // Calls the default constructor
         this.autor = autor;
+    }
+
+    public Livro(){
         this.isbn = "000-000-000-00-0";
     }
 
