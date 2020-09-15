@@ -1,10 +1,10 @@
 public class Livro {
 
-    protected String nome;
-    protected String descricao;
-    protected double valor;
-    protected String isbn;
-    protected Autor autor;
+    private String nome;
+    private String descricao;
+    private double valor;
+    private String isbn;
+    private Autor autor;
 
     public Livro(Autor autor) {
         this(); // Calls the default constructor
