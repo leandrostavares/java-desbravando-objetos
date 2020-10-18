@@ -7,7 +7,11 @@ public class Livro {
     private Autor autor;
 
     public Livro(Autor autor) {
+        this(); // Calls the default constructor
         this.autor = autor;
+    }
+
+    public Livro(){
         this.isbn = "000-000-000-00-0";
     }
 
