@@ -1,4 +1,4 @@
-public class Revista implements Produto{
+public class Revista implements Produto, Promocional {
 
     private String nome;
     private String descricao;
@@ -12,8 +12,22 @@ public class Revista implements Produto{
         this.editora = editora;
     }
 
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
     @Override
     public double getValor() {
         return valor;
+    }
+
+    @Override
+    public boolean aplicaDescontoDe(double porcentagem) {
+        if (porcentagem > 0.01) {
+            return false;
+        }
+        double desconto = getValor() * porcentagem;
+        setValor(getValor() - desconto);
+        return true;
     }
 }
