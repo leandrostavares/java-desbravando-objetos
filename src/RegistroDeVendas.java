@@ -7,6 +7,10 @@ public class RegistroDeVendas {
         LivroFisico fisico = new LivroFisico(autor);
         fisico.setNome("Test-Driven Development");
         fisico.setValor(59.90);
+        System.out.println("Valor do livro físico: " + fisico.getValor());
+        if (fisico.aplicaDescontoDe10PorCento()) {
+            System.out.println("Valor do livro físico com 10% de desconto: " + fisico.getValor());
+        }
 
         Ebook ebook = new Ebook(autor);
         ebook.setNome("Test-Driven Development");
@@ -16,7 +20,7 @@ public class RegistroDeVendas {
         carrinhoDeCompras.adiciona(fisico);
         carrinhoDeCompras.adiciona(ebook);
 
-        System.out.println(carrinhoDeCompras.getValorTotalDaCompra());
+        System.out.println("Valor total da compra: " + carrinhoDeCompras.getValorTotalDaCompra());
 
     }
 }
