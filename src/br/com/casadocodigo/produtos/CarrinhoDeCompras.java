@@ -1,3 +1,7 @@
+package br.com.casadocodigo.produtos;
+
+import br.com.casadocodigo.produtos.interfaces.Produto;
+
 public class CarrinhoDeCompras {
 
     private double valorTotalDaCompra;

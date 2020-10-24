@@ -1,3 +1,11 @@
+package br.com.casadocodigo.teste;
+
+import br.com.casadocodigo.livraria.Autor;
+import br.com.casadocodigo.produtos.CarrinhoDeCompras;
+import br.com.casadocodigo.produtos.Ebook;
+import br.com.casadocodigo.produtos.LivroFisico;
+
+
 public class RegistroDeVendas {
 
     public static void main(String[] args) {
