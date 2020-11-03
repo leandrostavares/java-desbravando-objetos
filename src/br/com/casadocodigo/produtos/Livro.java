@@ -1,5 +1,6 @@
 package br.com.casadocodigo.produtos;
 
+import br.com.casadocodigo.exceptions.AutorNuloException;
 import br.com.casadocodigo.livraria.Autor;
 import br.com.casadocodigo.produtos.interfaces.Produto;
 
@@ -13,6 +14,9 @@ public abstract class Livro implements Produto {
 
     public Livro(Autor autor) {
         this(); // Calls the default constructor
+        if (autor == null) {
+            throw new AutorNuloException("O autor do livro não pode ser nulo");
+        }
         this.autor = autor;
     }
 
