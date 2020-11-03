@@ -19,4 +19,7 @@ public class CarrinhoDeCompras {
         return valorTotalDaCompra;
     }
 
+    public Produto[] getProdutos() {
+        return produtos;
+    }
 }
