@@ -24,16 +24,16 @@ public abstract class Livro implements Produto {
         this.isbn = "000-000-000-00-0";
     }
 
-    public void mostrarDetalhes() {
-        System.out.println("Exibindo detalhes do livro");
-        System.out.println("Nome:" + nome);
-        System.out.println("Descrição: " + descricao);
-        System.out.println("Valor: " + valor);
-        System.out.println("ISBN: " + isbn);
-        if (this.temAutor()){
-            autor.mostrarDetalhes();
-        }
-        System.out.println("--");
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Exibindo detalhes do livro").append(System.lineSeparator());
+        stringBuilder.append("Nome:").append(nome).append(System.lineSeparator());
+        stringBuilder.append("Descrição: ").append(descricao).append(System.lineSeparator());
+        stringBuilder.append("Valor: ").append(valor).append(System.lineSeparator());
+        stringBuilder.append("ISBN: ").append(isbn).append(System.lineSeparator());
+        stringBuilder.append(autor.toString()).append(System.lineSeparator());
+        return stringBuilder.toString();
     }
 
     public boolean temAutor(){

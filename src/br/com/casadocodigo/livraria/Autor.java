@@ -6,11 +6,14 @@ public class Autor {
     private String email;
     private String cpf;
 
-    public void mostrarDetalhes() {
-        System.out.println("Informações do autor");
-        System.out.println("Nome: " + nome);
-        System.out.println("E-mail: " + email);
-        System.out.println("CPF: " + cpf);
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Informações do autor").append(System.lineSeparator());
+        stringBuilder.append("Nome: ").append(nome).append(System.lineSeparator());
+        stringBuilder.append("E-mail: ").append(email).append(System.lineSeparator());
+        stringBuilder.append("CPF: ").append(cpf).append(System.lineSeparator());
+        return stringBuilder.toString();
     }
 
     public String getNome() {
