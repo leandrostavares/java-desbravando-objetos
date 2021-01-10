@@ -17,7 +17,7 @@ public class CadastroDeLivros {
         livro.setDescricao("Novos recursos da linguagem");
         livro.setValor(59.90);
         livro.setIsbn("978-34-24542-46-6");
-        livro.mostrarDetalhes();
+        System.out.println(livro);
 
         if (!livro.aplicaDescontoDe(0.2)) {
             System.out.println("O desconto não pôde ser aplicado!");
@@ -33,7 +33,7 @@ public class CadastroDeLivros {
         outroLivro.setDescricao("Crie seus primeiros programas");
         outroLivro.setValor(59.90);
         outroLivro.setIsbn("9768-85-66250-22-0");
-        outroLivro.mostrarDetalhes();
+        System.out.println(outroLivro);
 
         if (!outroLivro.aplicaDescontoDe(0.4)) {
             System.out.println("O desconto não pôde ser aplicado");
