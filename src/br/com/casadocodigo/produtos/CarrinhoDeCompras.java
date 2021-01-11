@@ -2,24 +2,34 @@ package br.com.casadocodigo.produtos;
 
 import br.com.casadocodigo.produtos.interfaces.Produto;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CarrinhoDeCompras {
 
-    private Produto[] produtos = new Produto[10];
-    private int contador = 0;
-    private double valorTotalDaCompra;
+    private List<Produto> produtos;
+
+    public CarrinhoDeCompras() {
+        this.produtos = new ArrayList<>();
+    }
 
     public void adiciona(Produto produto) {
-        System.out.println("Adicionando produto: " + produto);
-        this.produtos[contador] = produto;
-        this.contador++;
-        this.valorTotalDaCompra += produto.getValor();
+        this.produtos.add(produto);
+    }
+
+    public void remove(Produto produto) {
+        this.produtos.remove((produto));
     }
 
     public double getValorTotalDaCompra() {
-        return valorTotalDaCompra;
+        double valorTotal = 0.0;
+        for (Produto produto : produtos) {
+            valorTotal += produto.getValor();
+        }
+        return valorTotal;
     }
 
-    public Produto[] getProdutos() {
+    public List<Produto> getProdutos() {
         return produtos;
     }
 }
