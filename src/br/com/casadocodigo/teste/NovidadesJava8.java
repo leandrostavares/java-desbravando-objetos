@@ -26,12 +26,7 @@ public class NovidadesJava8 {
         ruby.setNome("Livro de Ruby");
 
         List<Livro> livros = Arrays.asList(javaoo,java8,ruby);
-        livros.sort(new Comparator<Livro>() {
-            @Override
-            public int compare(Livro l1, Livro l2){
-                return l1.getNome().compareTo(l2.getNome());
-            }
-        });
+        livros.sort(Comparator.comparing((Livro::getNome)));
 
         for (Livro livro : livros)  {
             System.out.println(livro.getNome());
