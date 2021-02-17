@@ -10,14 +10,6 @@ import java.util.Comparator;
 import java.util.List;
 
 
-class ComparadorPorNome implements Comparator<Livro>{
-    @Override
-    public int compare(Livro l1, Livro l2){
-        return l1.getNome().compareTo(l2.getNome());
-    }
-}
-
-
 public class NovidadesJava8 {
 
     public static void main(String[] args) {
@@ -34,7 +26,12 @@ public class NovidadesJava8 {
         ruby.setNome("Livro de Ruby");
 
         List<Livro> livros = Arrays.asList(javaoo,java8,ruby);
-        Collections.sort(livros, new ComparadorPorNome());
+        Collections.sort(livros, new Comparator<Livro>() {
+            @Override
+            public int compare(Livro l1, Livro l2){
+                return l1.getNome().compareTo(l2.getNome());
+            }
+        });
 
         for (Livro livro : livros)  {
             System.out.println(livro.getNome());
