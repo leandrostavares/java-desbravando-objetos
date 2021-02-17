@@ -36,6 +36,17 @@ public abstract class Livro implements Produto {
         return stringBuilder.toString();
     }
 
+    @Override
+    public int compareTo(Produto produto) {
+        return Double.compare(this.getValor(), produto.getValor());
+    }
+    /*
+    Outra possível implementação do compareTo:
+     public int compareTo(Produto produto) {
+        return this.getValor() - produto.getValor();
+    }
+     */
+
     public boolean temAutor(){
         return this.autor != null;
     }
