@@ -1,6 +1,5 @@
 package br.com.casadocodigo.teste;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.*;
 
@@ -9,9 +8,6 @@ import static java.time.temporal.ChronoUnit.SECONDS;
 public class TestandoPerformance {
 
     public static void main(String[] args) {
-
-        // Formatter
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm:ss");
 
         // Time controllers
         LocalTime start;
